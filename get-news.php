@@ -7,7 +7,6 @@ require_once('../../include/phpScripts/database.inc.php');
 /* construct the SQL statement */
 $sql = "SELECT `news`.`id`, DATE_FORMAT(`datestamp`,\"%M %Y\") as dateinfo, `moreinfo`,`title`, `photo_path`,`photo_path2`,`description`,`department`, `postdate`, `groups` FROM `news`";
 
-$sql .= " where datestamp >= DATE_SUB(CURDATE(),INTERVAL 1 YEAR)";
 $sql .= " ORDER BY datestamp desc";
 
 /* execute SQL statement and store the result */
