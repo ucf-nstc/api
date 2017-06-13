@@ -1,8 +1,9 @@
 <?php
 
-// Simple API for accessing news posts
+// Simple API for accessing news posts and returning as a json string
 
-require_once('../../include/phpScripts/database.inc.php'); 
+echo(include('../include/phpScripts/database.inc.php'));
+// require_once('./include/phpScripts/database.inc.php'); 
 
 /* construct the SQL statement */
 $sql = "SELECT `news`.`id`, DATE_FORMAT(`datestamp`,\"%M %Y\") as dateinfo, `moreinfo`,`title`, `photo_path`,`photo_path2`,`description`,`department`, `postdate`, `groups` FROM `news`";
@@ -33,5 +34,3 @@ while ($row = mysql_fetch_assoc($result)) {
 
 $json = json_encode($output);
 echo($json);
-
-?>
