@@ -5,7 +5,7 @@
 require_once('../include/phpScripts/database.inc.php');
 
 /* construct the SQL statement */
-$sql = "SELECT `group_members`.`id`, `firstName`, `lastName`, `affiliations`, `education`, `email`, `research`, `image`, `title`, `groups`, 'alumni' FROM `group_members`";
+$sql = "SELECT `group_members`.`id`, `firstName`, `lastName`, `affiliations`, `education`, `email`, `research`, `image`, `title`, `groups`, `alumni` FROM `group_members`";
 
 /* execute SQL statement and store the result */
 $result = mysql_query($sql);
